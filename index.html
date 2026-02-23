@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CinePortfólio — Marco Antonio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Portfólio em formato de cinema com cortina, letreiro, contador e efeitos de luz." />
+</head>
+
+<body>
+  <!-- Cortinas -->
+  <div class="curtain curtain--left" aria-hidden="true"></div>
+  <div class="curtain curtain--right" aria-hidden="true"></div>
+
+  <!-- Overlay: contador + pré-show -->
+  <div class="countdownOverlay" id="countdownOverlay" aria-hidden="true">
+    <div class="countdownFrame">
+      <div class="countdownLabel">Prepare-se…</div>
+      <div class="countdownNumber" id="countdownNumber">5</div>
+      <div class="countdownSub">As cortinas irão se abrir</div>
+      <div class="countdownDots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal CV -->
+  <div class="modal" id="cvModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="cvModalTitle">
+      <div class="modal__top">
+        <div class="modal__title">
+          <div class="modal__pill">CV • PDF</div>
+          <h3 id="cvModalTitle">Visualizador de Currículo</h3>
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn btn--secondary" id="cvViewPt" type="button">Ver PT</button>
+          <button class="btn btn--secondary" id="cvViewEn" type="button">Ver EN</button>
+
+          <a class="btn btn--ghost" id="cvDownloadPt" href="#" download>Baixar PT</a>
+          <a class="btn btn--ghost" id="cvDownloadEn" href="#" download>Baixar EN</a>
+
+          <button class="btn btn--primary" id="cvFullscreen" type="button">Tela cheia</button>
+          <button class="btn btn--ghost" id="cvClose" type="button">Fechar</button>
+        </div>
+      </div>
+
+      <div class="modal__body">
+        <div class="cvNotice" id="cvNotice">Se o PDF não aparecer, use os botões de download.</div>
+        <iframe id="cvFrame" class="cvFrame" title="CV em PDF" src="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar__row">
+      <!-- Letreiro centralizado -->
+      <div class="marqueeWrap">
+        <div class="marquee" role="banner" aria-label="Letreiro do cinema">
+          <span class="marquee__text" id="cinemaName">CINEMA • SEU NOME • PORTFÓLIO</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn--ghost" id="reopenCurtain" type="button">Reabrir cortina</button>
+        <button class="btn btn--secondary" id="replayShow" type="button">Repetir show</button>
+        <button class="btn btn--primary" id="openCvModal" type="button">Ver CV (PDF)</button>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#home" class="nav__link" data-route="home">Início</a>
+      <a href="#about" class="nav__link" data-route="about">Sobre Mim</a>
+      <a href="#projects" class="nav__link" data-route="projects">Projetos</a>
+      <a href="#experience" class="nav__link" data-route="experience">Experiências</a>
+      <a href="#contact" class="nav__link" data-route="contact">Contato</a>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="screen" aria-label="Tela de cinema">
+      <!-- FX de tela / cinema -->
+      <div class="fx fx--iris" aria-hidden="true"></div>
+      <div class="fx fx--vignette" aria-hidden="true"></div>
+      <div class="fx fx--grain" aria-hidden="true"></div>
+      <div class="fx fx--scanlines" aria-hidden="true"></div>
+      <div class="fx fx--ambientLight" aria-hidden="true"></div>
+      <div class="fx fx--mouseLight" aria-hidden="true"></div>
+      <div class="fx fx--dust" aria-hidden="true"></div>
+      <div class="fx fx--screenFlicker" aria-hidden="true"></div>
+
+      <!-- Luzes do show (antes/durante abrir) -->
+      <div class="fx fx--preShow" aria-hidden="true"></div>
+      <div class="fx fx--curtainShow" aria-hidden="true"></div>
+
+      <!-- Ambiente cinema: poltronas/silhueta -->
+      <div class="fx fx--seats" aria-hidden="true"></div>
+
+      <!-- HOME -->
+      <section class="page page--active" id="page-home" data-page="home">
+        <div class="hero">
+          <div class="hero__copy">
+            <div class="tagline">Bem-vindo(a)</div>
+            <h1 class="title" id="heroTitle">Marco Antonio</h1>
+            <p class="subtitle" id="heroSubtitle">
+              Eu transformo ideias em soluções — com roteiro, direção e entrega.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projects">Ver projetos</a>
+              <button class="btn btn--secondary" id="openCvModal2" type="button">Ver CV (PDF)</button>
+              <a class="btn btn--ghost" href="#contact">Falar comigo</a>
+            </div>
+
+            <div class="meta">
+              <div class="meta__item"><span class="meta__label">Gênero</span><span class="meta__value">Tech • Criatividade • Produto</span></div>
+              <div class="meta__item"><span class="meta__label">Duração</span><span class="meta__value">Em constante evolução</span></div>
+              <div class="meta__item"><span class="meta__label">Classificação</span><span class="meta__value">Livre</span></div>
+            </div>
+
+            <div class="cinemaHint">
+              <span class="dot"></span>
+              <span>Movimente o mouse na tela para ver a luz do projetor.</span>
+            </div>
+          </div>
+
+          <div class="hero__poster">
+            <div class="posterFrame" aria-label="Foto de apresentação">
+              <img id="posterImg" class="posterImg" src="" alt="Foto de apresentação" />
+              <div class="projectorBeam" aria-hidden="true"></div>
+              <div class="lightSweep" aria-hidden="true"></div>
+
+              <div class="posterOverlay">
+                <div class="posterBadge">APRESENTA</div>
+                <div class="posterHint">Troque a foto em <code>script.js</code>.</div>
+              </div>
+            </div>
+
+            <div class="lightDots" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="page" id="page-about" data-page="about">
+        <header class="pageHeader">
+          <h2 class="pageTitle">Sobre Mim</h2>
+          <p class="pageLead">Uma sinopse rápida e um pouco dos bastidores.</p>
+        </header>
+
+        <div class="cardGrid">
+          <article class="card">
+            <h3 class="card__title">Sinopse</h3>
+            <p class="card__text" id="aboutText"></p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Habilidades (Elenco)</h3>
+            <ul class="chips" id="skillsChips" aria-label="Lista de habilidades"></ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Bastidores</h3>
+            <div class="kv" id="kvList" aria-label="Informações rápidas"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="page" id="page-projects" data-page="projects">
+        <header class="pageHeader">
+          <h2 class="pageTitle">Projetos</h2>
+          <p class="pageLead">Uma timeline dinâmica com os “lançamentos”.</p>
+        </header>
+
+        <div class="toolbar">
+          <div class="field">
+            <label for="projectSearch">Buscar</label>
+            <input id="projectSearch" type="search" placeholder="Filtrar por título, tag ou ano..." autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <label for="projectSort">Ordenar</label>
+            <select id="projectSort">
+              <option value="desc">Mais recentes</option>
+              <option value="asc">Mais antigos</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="projectTag">Tag</label>
+            <select id="projectTag">
+              <option value="all">Todas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="timeline" id="timeline" aria-label="Timeline de projetos"></div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="page" id="page-experience" data-page="experience">
+        <header class="pageHeader">
+          <h2 class="pageTitle">Experiências</h2>
+          <p class="pageLead">Créditos do elenco — onde atuei e o que entreguei.</p>
+        </header>
+
+        <div class="expLayout">
+          <div class="expList" id="expList" aria-label="Lista de experiências"></div>
+
+          <aside class="sidePanel">
+            <h3 class="sidePanel__title">Destaques</h3>
+            <ul class="checklist" id="highlightsList" aria-label="Destaques e competências"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="page" id="page-contact" data-page="contact">
+        <header class="pageHeader">
+          <h2 class="pageTitle">Contato</h2>
+          <p class="pageLead">Fale comigo. Respondo assim que possível.</p>
+        </header>
+
+        <div class="contactGrid">
+          <div class="contactCard">
+            <h3 class="contactCard__title">Canais</h3>
+
+            <div class="iconRows">
+              <a class="iconRow" href="#" id="linkEmail" aria-label="E-mail">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </span>
+                <span><strong>E-mail</strong><span class="muted" id="emailValue"></span></span>
+              </a>
+
+              <a class="iconRow" href="#" id="linkLinkedIn" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 10v7M8 8v.2M11 10v7m0-4c0-1.7 3-2 3 0v4m-3-4c0-2.2 6-2.6 6 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span><strong>LinkedIn</strong><span class="muted" id="linkedinValue"></span></span>
+              </a>
+
+              <a class="iconRow" href="#" id="linkGitHub" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <span class="icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M12 2c5.5 0 10 4.2 10 9.4 0 4.1-2.9 7.6-6.9 8.8-.5.1-.7-.2-.7-.5v-1.8c0-.6-.2-1-.6-1.2 2.1-.2 4.3-1 4.3-4.7 0-1.1-.4-2-1.1-2.7.1-.3.5-1.3-.1-2.6 0 0-.9-.3-2.8 1a9.6 9.6 0 0 0-5 0c-2-1.3-2.8-1-2.8-1-.6 1.3-.2 2.3-.1 2.6-.7.7-1.1 1.6-1.1 2.7 0 3.7 2.2 4.5 4.3 4.7-.3.2-.6.6-.6 1.2v2.1c0 .3-.2.6-.7.5C4.9 19 2 15.5 2 11.4 2 6.2 6.5 2 12 2z"
+                          fill="none" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </span>
+                <span><strong>GitHub</strong><span class="muted" id="githubValue"></span></span>
+              </a>
+            </div>
+
+            <div class="note">Edite seus dados e arquivos no <code>script.js</code>.</div>
+          </div>
+
+          <div class="contactCard">
+            <h3 class="contactCard__title">Envie uma mensagem</h3>
+
+            <form id="contactForm" novalidate>
+              <div class="formRow">
+                <label for="name">Nome</label>
+                <input id="name" name="name" type="text" placeholder="Seu nome" required minlength="2" />
+                <small class="error" data-error-for="name"></small>
+              </div>
+
+              <div class="formRow">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required />
+                <small class="error" data-error-for="email"></small>
+              </div>
+
+              <div class="formRow">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem..." required minlength="10"></textarea>
+                <small class="error" data-error-for="message"></small>
+              </div>
+
+              <div class="formActions">
+                <button class="btn btn--primary" type="submit">Enviar e-mail</button>
+                <button class="btn btn--ghost" type="button" id="copyBtn">Copiar mensagem</button>
+              </div>
+
+              <p class="formHint">O envio abre seu cliente de e-mail (mailto).</p>
+              <div class="toast" id="toast" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> <span id="footerName">Marco Antonio</span> — CinePortfólio</span>
+      
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
