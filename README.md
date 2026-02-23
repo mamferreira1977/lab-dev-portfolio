@@ -1,62 +1,22 @@
 # Repo Portfólio 🖥️
 
-![React](https://img.shields.io/badge/React-19.1.1-007ec6?style=for-the-badge&logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-7.1.2-007ec6?style=for-the-badge&logo=vite&logoColor=white) ![GitHub repo size](https://img.shields.io/github/repo-size/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&logo=files) ![GitHub directory file count](https://img.shields.io/github/directory-file-count/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&logo=files) ![GitHub stars](https://img.shields.io/github/stars/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&logo=github) ![GitHub forks](https://img.shields.io/github/forks/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&logo=git) ![GitHub language count](https://img.shields.io/github/languages/count/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&logo=python) ![GitHub license](https://img.shields.io/github/license/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&color=007ec6&logo=opensourceinitiative) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&color=007ec6&logo=gitkraken) ![GitHub last commit](https://img.shields.io/github/last-commit/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge&logo=clockify) ![Vercel](https://vercelbadge.vercel.app/api/joaopauloaramuni/joaopauloaramuni-portfolio?style=for-the-badge) ![Views Counter](https://views-counter.vercel.app/badge?pageId=https%3A%2F%2Fgithub%2Ecom%2Fjoaopauloaramuni%2Fjoaopauloaramuni-portfolio&leftColor=555555&rightColor=007ec6&type=total&label=RepoViews)  
+Este é o repositório do meu **portfólio pessoal**, um projeto desenvolvido com HTML, CSS e JavaScript para apresentar meus projetos, habilidades e experiências de forma interativa e moderna. 
 
------
+🖥️ O portfólio simula uma **tela de cinema** onde os visitantes terão a experiência de visualizar o portfólio em um ambiente que simula um cinema. Entre os comandos disponíveis estão:
 
-Este é o repositório do meu **portfólio pessoal**, um projeto desenvolvido com React e Vite para apresentar meus projetos, habilidades e experiências de forma interativa e moderna. Sinta-se à vontade para explorá-lo e utilizá-lo como desejar.
-
-🖥️ O portfólio simula um **terminal** web, permitindo que visitantes explorem meu conteúdo através de comandos, tornando a navegação divertida e única. Entre os comandos disponíveis estão:
-
-* 👤 **sobre:** Mostra uma breve descrição sobre mim.
-* 📜 **ajuda:** Exibe a lista de comandos disponíveis.
+* 👤 **sobre mim:** Mostra uma breve descrição sobre mim.  
 * 🏢 **experiencias:** Mostra minha trajetória profissional e experiências.
-* 📧 **contato:** Exibe minhas informações de contato e envia email.
-* 📅 **calendly:** Agende uma reunião comigo via Calendly.
-* 🧹 **limpar:** Limpa o histórico do terminal.
-* 👍 **recomendacoes:** Exibe minhas recomendações do LinkedIn.
-* 🏆 **premios:** Mostra prêmios e reconhecimentos.
+* 📧 **contato:** Exibe minhas informações de contato e envia email.   
 * 📂 **projetos:** Lista meus projetos desenvolvidos (estáticos).
-* 🐙 **github:** Exibe meus repositórios usando a GitHub API.
-* 👨‍💻 **habilidades:** Exibe minhas habilidades em programação.
-* 🎵 **spotify:** Mostra o que estou ouvindo e últimas reproduções.
-* ⏱️ **wakatime:** Mostra quanto tempo passei programando e em quais linguagens.
-* 📄 **curriculo:** Exibe meu currículo com visualização em PDF.
-* 🕹️ **game:** Permite jogar o Flappy Plane diretamente no terminal web.
+* 📄 **ver curriculo:** Exibe meu currículo com visualização em PDF em português e inglês.  
 
-O portfólio integra componentes como **ProjectCard** e **ExperienceCard**, exibindo informações de forma dinâmica, além de suporte a múltiplos idiomas e visualização interativa de PDFs. Ele combina design moderno, navegação intuitiva e funcionalidades interativas, proporcionando uma experiência imersiva para quem deseja conhecer meu trabalho.
+Este portfólio simula o design de uma cinema e proporciona uma experiência imersiva para quem deseja conhecer meu trabalho.
 
 -----
 
 ## 🏫 História do projeto
 
-Este projeto surgiu durante a minha disciplina de **Laboratório de Desenvolvimento de Software**, no curso de Engenharia de Software da PUC Minas. A proposta era que cada aluno desenvolvesse seu próprio portfólio profissional, aplicando conceitos de **engenharia de software** aprendidos na disciplina de **Projeto de Software**, da qual também leciono.
-
-O objetivo foi integrar teoria e prática, incentivando a experimentação e o aprendizado “mão na massa”, enquanto os alunos criavam uma apresentação interativa de suas habilidades e projetos.
-
-O exercício completo pode ser encontrado [aqui](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/tree/main/LABORATORIOS).
-
-### 🏆 Premiação
-
-O grupo com o melhor portfólio ganhou como premiação um ano de domínio **pago** por mim (.dev, .io etc.) para cada integrante.
-
-Grupo vencedor:
-
-- João Vitor Santana Lopes:
-    - :octocat: https://github.com/JoaoSantanaLopes/Portifolio-Terminal
-    - ☁️ https://joao-santana.vercel.app/
-
-- Gabriel Chagas Lage:
-    - :octocat: https://github.com/gabrielchagas13/gabriel-chagas-lage
-    - ☁️ https://gabriel-chagas-lage.vercel.app/
-
-- Pedro Maia da Costa Silva:
-    - :octocat: https://github.com/PedroMaia312/Portf-lio
-    - ☁️ https://portfolio-pedro-maia.vercel.app/
- 
-- Arthur Henrique Santana Pedra:
-    - :octocat: https://github.com/arthies2323/portfolioLab001
-    - ☁️ https://meu-portfolio-arthur-pedra.vercel.app/
+Este projeto faz parte do conteúdo da disciplina de **Laboratório de Desenvolvimento de Software**, no curso de Engenharia de Software da PUC Minas. A proposta é que cada aluno desenvolva seu próprio portfólio profissional, aplicando conceitos de **engenharia de software** aprendidos na disciplina de **Projeto de Software**.
 
 -----
 
@@ -64,41 +24,30 @@ Grupo vencedor:
 
 A versão online deste projeto está hospedada e pode ser acessada através do link abaixo:
 
-- ➡️ **[https://joaopauloaramuni-portfolio.vercel.app/](https://joaopauloaramuni-portfolio.vercel.app/)**
-- ➡️ **[https://aramuni.dev/](https://aramuni.dev/)**
-  - 🔹 O domínio `.dev` é uma extensão popular entre desenvolvedores e profissionais de tecnologia.  
-    Em setembro de 2025, o custo de um domínio `.dev` adquirido através da Vercel é de **US$ 13** por ano.  
-    Você pode adquirir o seu domínio diretamente no [site da Vercel](https://vercel.com/domains).
-
+- ➡️ **[https://marcomferreira-portfolio.vercel.app/](https://marcomferreira-portfolio.vercel.app/)**  
+  
 -----
 
 ## 🛠️ Tecnologias utilizadas
 
-* **React:** Biblioteca principal para a construção da interface.
-* **Vite:** Ferramenta de build para um desenvolvimento rápido e otimizado.
+* **HTML,CSS e JavaScript:** Desenvolvimento da estrutura e interação do site.  
 
 -----
 
-## 📦 Dependências
+## 📦 Wireframes e Protótipos-FIGMA
 
-O projeto utiliza várias dependências importantes para funcionalidades específicas:
+No projeto foi desenvolvido wireframes das telas.Segue, abaixo, link do FIGMA com o protótipo do projeto:
 
-* **i18next & react-i18next:** Para suporte a internacionalização e múltiplos idiomas.
-* **react-icons:** Para adicionar ícones facilmente na interface.
-* **react-router-dom:** Para navegação entre páginas dentro do React.
-* **react-terminal-ui:** Um componente de terminal React com suporte a temas claros e escuros, baseado em termynal.js.
-* **react-type-animation:** Para animações de digitação de texto.
-* **@react-pdf-viewer/core, @react-pdf-viewer/default-layout & pdfjs-dist:** Para exibir PDFs diretamente na aplicação de forma interativa e estilizada.
-* **emailjs-com**: Para enviar e-mails diretamente do frontend sem precisar de um backend próprio.
-* **react-calendly: (Opcional)** Para integrar o Calendly diretamente no React, permitindo agendamento inline ou popup.
-
-Essas dependências permitem funcionalidades avançadas como visualização de PDFs, animações de terminal e suporte multilíngue.
+**[portfolio](https://www.figma.com/proto/8Nhv7I60l9A2W4yXryjwKm/CinePortfolioLab?node-id=0-1&t=EKrZ4v35RnwdfJ2z-1)**
 
 -----
 
-## 📌 Diferença entre usar `react-calendly` e o embed oficial
+## 📌 Implementação do layout principal(imagem)
 
-Existem duas formas principais de integrar o Calendly em uma aplicação React:
+<img width="1359" height="667" alt="Tela-inicial-Portfólio" src="https://github.com/user-attachments/assets/9eac3df4-55f2-4795-a6ad-f4e5b25c5c88" />
+
+
+
 
 ### 1. Usando `react-calendly`
 
