@@ -38,25 +38,32 @@ const projects = [
   },
   {
     year: 2025,
-    title: "Timeline Dinâmica",
-    desc: "Timeline com filtro, ordenação e tags via JavaScript.",
+    title: "Calculadora Dinâmica",
+    desc: "Desenvolvimento de uma calculadora via JavaScript e React.",
     tags: ["JavaScript", "Componentes"],
+    links: [{ label: "Case", url: "#" }],
+  },
+  {
+    year: 2025,
+    title: "site estático Atlético-MG",
+    desc: "Desenvolvimento de um site estático para o Atlético-MG.",
+    tags: ["HTML", "CSS", "JavaScript"],
     links: [{ label: "Case", url: "#" }],
   },
 ];
 
 const experiences = [
   {
-    role: "Desenvolvedora Front-end",
-    where: "Empresa X",
-    period: "2024 — 2026",
-    bullets: ["Interfaces responsivas e acessíveis.", "Integração com APIs.", "Padrões e documentação."],
+    role: "Desenvolvedor Front-end",
+    where: "Prodemge",
+    period: "2025 — atual",
+    bullets: ["Interfaces responsivas e acessíveis.", "Padrões e documentação."],
   },
   {
-    role: "Analista / Produto",
-    where: "Projeto Y",
-    period: "2022 — 2024",
-    bullets: ["Melhoria de UX.", "Planejamento e acompanhamento de entregas."],
+    role: "Desenvolvedor Front-end / Analista Banco de Dados",
+    where: "TRF6",
+    period: "2023— 2025",
+    bullets: ["Desenvolvimento de Banco de Dados.", "Criação de sites responsivos."],
   },
 ];
 
@@ -227,7 +234,7 @@ function applyProfile() {
   $("#linkGitHub").href = profile.github;
 
   const img = $("#posterImg");
-  img.src = profile.posterImgSrc || "";
+  if (img) img.src = profile.photo;
 }
 
 function uniqueTags(items) {
