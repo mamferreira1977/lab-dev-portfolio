@@ -24,7 +24,7 @@ Este projeto faz parte do conteúdo da disciplina de **Laboratório de Desenvolv
 
 A versão online deste projeto está hospedada e pode ser acessada através do link abaixo:
 
-- ➡️ **[https://marcomferreira-portfolio.vercel.app/](https://marcomferreira-portfolio.vercel.app/)**  
+- ➡️ **[https://lab-dev-portfolio.vercel.app/](https://lab-dev-portfolio.vercel.app/)**  
   
 -----
 
